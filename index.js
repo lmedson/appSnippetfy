@@ -6,6 +6,9 @@ const routes = require('./app/routes/routes')
 
 const app = express();
 
+const {User} = require('.app/models/')
+User.create({name:'medson',email:'medson@gmail.com', password:'123456'})
+
 nunjucks.configure(path.resolve('app','views'),{
   autoescape: true,
   express: app
