@@ -14,13 +14,13 @@ app.use(express.static(path.resolve('app','public')));
 
 nunjucks.configure(path.resolve('app','views'),{
   autoescape: true,
-  express: app
+  express: app,
 });
 
 
 app.set('view engine','njk'); // This way it is not necessary to inform the extension of the file in res.send
 app.use(bodyParser.urlencoded({ extended: false }));
-//repassing session config 
+//repassing session config
 app.use(session(sessionConfig));
 app.use(flash());
 
