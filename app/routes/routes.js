@@ -26,7 +26,7 @@ routes.post('/authenticate', authController.authenticate);
 routes.use('/app/', authMiddleware); //setting the auth middleware for all routes with prefix '/app'
 routes.get('/app/dashboard', dashboardController.index);
 
-routes.use((req, res, next) => res.render('errors/404'))
+routes.use((req, res, next) => res.render('errors/404'));
 
 routes.use((err, req, res, _next) => {
 	res.status(err.status || 500);
