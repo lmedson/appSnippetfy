@@ -1,1 +1,27 @@
-<h1>Dashboard</h1>
+{% extends 'layouts/default.njk' %}
+
+{% block body %}
+  <div class="wrapper">
+    <nav id="main">
+      <div class="header">
+        <strong>Minha biblioteca</strong>
+        <a href="/signout">Sair</a>
+      </div>
+
+      <div class="categories">
+        <strong>Categorias</strong>
+
+        <ul>
+          <li>
+            <a href="">
+              React JS
+              <span>3</span>
+            </a>
+          </li>
+        </ul>
+
+        <a href="">NOVA CATEGORIA</a>
+      </div>
+    </nav>
+  </div>
+{% endblock %}

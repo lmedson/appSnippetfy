@@ -17,7 +17,7 @@ module.exports = {
         allowNull: false,
         type: DataTypes.DATE, // Sequelize.INTEGER
       },
-    })
+    });
   },
 
   down: (queryInterface) => {
