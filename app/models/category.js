@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) =>{
 
     Category.associate = (models) => {
       Category.belongsTo(models.User);
-      Category.hasMany(models.Snippet);
+      Category.hasMany(models.Snippet); //easy insert snippets by categories
     };
 
     return Category;

@@ -1,4 +1,3 @@
-
 module.exports = {
   up: (queryInterface, DataTypes) => {
     queryInterface.createTable('Categories', {
@@ -8,7 +7,7 @@ module.exports = {
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
-      UserId:{
+      userId:{
         type: DataTypes.INTEGER,
         references: { model:'Users', key:'id'},
         onUpdate:'CASCADE', //update userId in this table
